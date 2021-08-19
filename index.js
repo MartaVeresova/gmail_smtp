@@ -39,8 +39,9 @@ app.post('/sendMessage', async (req, res) => {
         subject: 'My profile page', // Subject line
         // text: 'Привет, учусь отправлять письма', // plain text body
         html: `<b>Сообщение с вашего portfolio</b>
-            <div>name: ${name}</div>
-            <div>email: ${email}</div>
+            <div><b>name:</b> ${name}</div>
+            <div><b>email:</b> ${email}</div>
+            <br/>
             <div>${message}</div>`, // html body
     });
 
