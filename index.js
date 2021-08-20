@@ -43,7 +43,7 @@ app.post('/sendMessage', async (req, res) => {
             <div><b>email:</b> ${email}</div>
             <br/>
             <div>${message}</div>`, // html body
-    });
+    })
 
     res.send('sendMessage')
 })
