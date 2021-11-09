@@ -34,7 +34,6 @@ app.get('/', (req, res) => {
 app.post('/sendMessage', async (req, res) => {
 
     let {name, email, message} = req.body
-    res.header("Access-Control-Allow-Origin", "*");
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
