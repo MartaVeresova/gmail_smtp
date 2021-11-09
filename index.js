@@ -48,6 +48,7 @@ app.post('/sendMessage', async (req, res) => {
             <div>${message}</div>`, // html body
     })
     res.send('sendMessage')
+    res.header("Access-Control-Allow-Origin", "*");
 })
 
 
