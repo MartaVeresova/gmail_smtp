@@ -13,6 +13,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     tls: {
@@ -24,9 +25,11 @@ let transporter = nodemailer.createTransport({
     },
 });
 
+
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+
 
 app.post('/sendMessage', async (req, res) => {
 
@@ -44,10 +47,8 @@ app.post('/sendMessage', async (req, res) => {
             <br/>
             <div>${message}</div>`, // html body
     })
-
     res.send('sendMessage')
 })
-
 
 
 app.listen(port, () => {
