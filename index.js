@@ -4,7 +4,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = process.env.PORT || 3010
+const port = process.env.PORT || 3000
 const smtp_login = process.env.SMTP_LOGIN || '---'
 const smtp_password = process.env.SMTP_PASSWORD || '---'
 
