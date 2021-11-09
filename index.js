@@ -51,6 +51,7 @@ app.post('/sendMessage', async (req, res) => {
 })
 
 
-app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`)
+app.listen(3010, () => {
+    // console.log(`Example app listening at http://localhost:${PORT}`)
+    console.log(`Example app listening at http://localhost: 3010`)
 })
