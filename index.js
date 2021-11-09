@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3010
 const smtp_login = process.env.SMTP_LOGIN || '---'
 const smtp_password = process.env.SMTP_PASSWORD || '---'
 
-app.use(cors({origin: "https://martaveresova.github.io/portfolio_js/"}))
+app.use(cors())
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
+    secure: false,
     tls: {
         rejectUnauthorized: false
     },
