@@ -23,7 +23,7 @@ let transporter = nodemailer.createTransport({
         user: smtp_login, // generated ethereal user
         pass: smtp_password, // generated ethereal password
     },
-});
+})
 
 
 app.get('/', (req, res) => {
