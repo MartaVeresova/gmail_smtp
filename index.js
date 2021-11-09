@@ -4,11 +4,11 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = process.env.PORT || 3010
+const PORT = process.env.PORT || 3010
 const smtp_login = process.env.SMTP_LOGIN || '---'
 const smtp_password = process.env.SMTP_PASSWORD || '---'
 
-app.use(cors({ origin: true, credentials: true }))
+app.use(cors({origin: "https://martaveresova.github.io/portfolio_js/"}))
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
@@ -51,6 +51,6 @@ app.post('/sendMessage', async (req, res) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`)
 })
