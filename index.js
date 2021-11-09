@@ -16,7 +16,6 @@ app.use(bodyParser.json())
 
 let transporter = nodemailer.createTransport({
     service: 'gmail',
-    secure: false,
     tls: {
         rejectUnauthorized: false
     },
